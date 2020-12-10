@@ -1,0 +1,143 @@
+body {
+  background-image: url(./img/bg.jpg);
+  background-size: 100%;
+}
+.moto {
+  width: 40%;
+}
+.moto img {
+  width: 100%;
+}
+
+.bordered {
+  width: 100%;
+  position: relative;
+  padding: 0 25px;
+}
+.bordered .cborder {
+  width: 25px;
+  bottom: 0;
+  position: absolute;
+  background-size: 100% 100%;
+}
+.bordered .cborder.left,
+.bordered .cborder.right {
+  height: 100%;
+}
+.bordered .cborder.left {
+  left: 0;
+}
+.bordered .cborder.right {
+  right: 0;
+}
+
+.bordered.top {
+  background: linear-gradient(0deg, #1e001a 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      rgb(120, 8, 99, 0.6),
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    ),
+    black;
+  /*height: 150px;*/
+}
+.bordered.top .cborder {
+  height: 107%;
+}
+.bordered.top .cborder.left {
+  background-image: url("./img/btl.png");
+}
+.bordered.top .cborder.right {
+  background-image: url("./img/btr.png");
+}
+.bordered.top .cborder.left::before,
+.bordered.top .cborder.right::before {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 10px;
+  content: " ";
+  background-size: 100% 100%;
+}
+.bordered.top .cborder.left::before {
+  right: -3px;
+  background-image: url(./img/btlback.png);
+}
+.bordered.top .cborder.right::before {
+  left: -3px;
+  background-image: url(./img/btrback.png);
+}
+.bordered.top .bulb {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.bordered.top .bulb img {
+  height: 100%;
+}
+.bordered.top .bulb.left {
+  left: 25px;
+}
+.bordered.top .bulb.right {
+  right: 25px;
+}
+.bordered.top .bulb.right img {
+  transform: scaleX(-1);
+}
+.bordered.top .logo {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: 80%;
+}
+
+.bordered.top-following {
+  height: 25px;
+}
+.bordered.top-following .cborder.left,
+.bordered.top-following .cborder.right {
+  width: 28px;
+}
+.bordered.top-following .cborder.left {
+  background-image: url("./img/btlfollowing.png");
+}
+.bordered.top-following .cborder.right {
+  background-image: url("./img/btrfollowing.png");
+}
+.bordered.top-following .background {
+  height: 100%;
+  background: black;
+  width: calc(100% + 4px);
+  margin-left: -2px;
+}
+
+.bordered.webgl {
+  width: auto;
+  height: 400px;
+  margin: 0 11px;
+  background: linear-gradient(
+      180deg,
+      #180014 0%,
+      transparent,
+      transparent,
+      transparent
+    ),
+    /*linear-gradient(transparent, rgb(158, 127, 150, 0.1), transparent),*/
+      linear-gradient(0deg, #1e001a 0%, transparent, transparent, transparent),
+    black;
+}
+.bordered.webgl .cborder {
+  width: 17px;
+}
+.bordered.webgl .cborder.left {
+  background-image: url("./img/bwebl.png");
+}
+.bordered.webgl .cborder.right {
+  background-image: url("./img/bwebr.png");
+}
