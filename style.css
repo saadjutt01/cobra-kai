@@ -12,10 +12,10 @@ body {
 .bordered {
   width: 100%;
   position: relative;
-  padding: 0 25px;
+  padding: 0 28px;
 }
 .bordered .cborder {
-  width: 25px;
+  width: 28px;
   bottom: 0;
   position: absolute;
   background-size: 100% 100%;
@@ -23,6 +23,7 @@ body {
 .bordered .cborder.left,
 .bordered .cborder.right {
   height: 100%;
+  z-index: 10;
 }
 .bordered .cborder.left {
   left: 0;
@@ -49,6 +50,7 @@ body {
 }
 .bordered.top .cborder {
   height: 107%;
+  z-index: auto;
 }
 .bordered.top .cborder.left {
   background-image: url("./img/btl.png");
@@ -66,11 +68,11 @@ body {
   background-size: 100% 100%;
 }
 .bordered.top .cborder.left::before {
-  right: -3px;
+  right: -5px;
   background-image: url(./img/btlback.png);
 }
 .bordered.top .cborder.right::before {
-  left: -3px;
+  left: -5px;
   background-image: url(./img/btrback.png);
 }
 .bordered.top .bulb {
@@ -82,10 +84,10 @@ body {
   height: 100%;
 }
 .bordered.top .bulb.left {
-  left: 25px;
+  left: 28px;
 }
 .bordered.top .bulb.right {
-  right: 25px;
+  right: 28px;
 }
 .bordered.top .bulb.right img {
   transform: scaleX(-1);
@@ -97,20 +99,20 @@ body {
   max-width: 80%;
 }
 
-.bordered.top-following {
+.bordered.top-fol {
   height: 25px;
 }
-.bordered.top-following .cborder.left,
-.bordered.top-following .cborder.right {
-  width: 28px;
+.bordered.top-fol .cborder.left,
+.bordered.top-fol .cborder.right {
+  width: 33px;
 }
-.bordered.top-following .cborder.left {
-  background-image: url("./img/btlfollowing.png");
+.bordered.top-fol .cborder.left {
+  background-image: url("./img/btlfol.png");
 }
-.bordered.top-following .cborder.right {
-  background-image: url("./img/btrfollowing.png");
+.bordered.top-fol .cborder.right {
+  background-image: url("./img/btrfol.png");
 }
-.bordered.top-following .background {
+.bordered.top-fol .background {
   height: 100%;
   background: black;
   width: calc(100% + 4px);
@@ -119,8 +121,9 @@ body {
 
 .bordered.webgl {
   width: auto;
-  height: 400px;
-  margin: 0 11px;
+  /*height: 400px;*/
+  margin: -1px 12px 0;
+  padding-bottom: 40px;
   background: linear-gradient(
       180deg,
       #180014 0%,
@@ -133,11 +136,144 @@ body {
     black;
 }
 .bordered.webgl .cborder {
-  width: 17px;
+  width: 21px;
 }
 .bordered.webgl .cborder.left {
   background-image: url("./img/bwebl.png");
 }
 .bordered.webgl .cborder.right {
   background-image: url("./img/bwebr.png");
+}
+.logos {
+  height: 70px;
+  padding: 10px 0;
+}
+.logos img {
+  margin: 0 10px;
+  height: 100%;
+}
+
+.webgl-container {
+  margin: 10px 40px 20px;
+}
+.youtube-container {
+  padding: 80px 60px;
+}
+
+.bordered.ctrls {
+  width: auto;
+  /*height: 90px;*/
+  margin: -1px -18px 0;
+  padding: 0 10px;
+}
+.bordered.ctrls .clipped-bg {
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 10px 0px;
+  background: linear-gradient(
+      0deg,
+      rgba(67, 38, 64, 0.3) 0%,
+      transparent,
+      transparent
+    ),
+    black;
+  clip-path: polygon(3% 0, 97% 0, 100% 100%, 0 100%);
+}
+.bordered.ctrls .cborder {
+  width: 50px;
+}
+.bordered.ctrls .cborder.left {
+  background-image: url("./img/bctrlsl.png");
+}
+.bordered.ctrls .cborder.right {
+  background-image: url("./img/bctrlsr.png");
+}
+.bordered.ctrls .logos img {
+  margin: 0 3%;
+}
+
+.bordered.ctrls-fol {
+  width: auto;
+  height: 90px;
+  margin: -1px -18px 0;
+  padding: 0 10px;
+}
+.bordered.ctrls-fol .clipped-bg {
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(78, 0, 0, 0.3) 0%,
+      transparent,
+      transparent
+    ),
+    black;
+  clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%);
+}
+.bordered.ctrls-fol .cborder {
+  width: 50px;
+}
+.bordered.ctrls-fol .cborder.left {
+  background-image: url("./img/bctrlslfol.png");
+}
+.bordered.ctrls-fol .cborder.right {
+  background-image: url("./img/bctrlsrfol.png");
+}
+
+.btn-netflix {
+  display: block;
+  width: 400px;
+  color: #ffaffc;
+  border: 2px solid #ffaffc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #663664;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 36px;
+  font-weight: 400;
+}
+.btn-netflix:hover,
+.btn-netflix:active {
+  box-shadow: 0px 0px 5px 4px #ff87fb inset, 0px 0px 5px 4px #663664;
+  background-color: #ff87fb;
+  border-color: #ff87fb;
+}
+
+.popup-container {
+  position: relative;
+  height: 500px;
+  margin: 60px;
+  font-size: 36px;
+  z-index: 20;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+}
+.popup-container .content {
+  padding: 40px;
+  width: 100%;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bordered.details .cborderbutton {
+  width: calc(100% - 34px);
+  left: 17px;
+  bottom: 0;
+  height: 22px;
+  position: absolute;
+  background-size: 100% 100%;
+  background-image: url("./img/bbottom.png");
+}
+
+footer {
+  margin-top: 400px;
+  height: 400px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
 }

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page Title</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
+    <title>Cobra Kai</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -17,6 +17,7 @@
 
       <div class="bordered top">
         <div class="cborder left"></div>
+        <div class="cborder right"></div>
         <div class="bulb left">
           <img src="./img/top-bulb.png" />
         </div>
@@ -24,19 +25,96 @@
         <div class="bulb right">
           <img src="./img/top-bulb.png" />
         </div>
-        <div class="cborder right"></div>
       </div>
 
-      <div class="bordered top-following">
+      <div class="bordered top-fol">
         <div class="cborder left"></div>
-        <div class="background"></div>
         <div class="cborder right"></div>
+        <div class="background"></div>
       </div>
 
       <div class="bordered webgl">
         <div class="cborder left"></div>
         <div class="cborder right"></div>
+        <div class="logos d-flex justify-content-center">
+          <img src="./img/web-snake.png" />
+          <img src="./img/web-netflix.png" />
+          <img src="./img/web-tree.png" />
+        </div>
+        <div class="webgl-container">
+          <img src="./img/webgl.jpg" style="width: 100%" />
+        </div>
+      </div>
+
+      <div class="bordered ctrls">
+        <div class="cborder left"></div>
+        <div class="cborder right"></div>
+        <div class="clipped-bg"></div>
+        <div class="logos d-flex justify-content-center">
+          <img src="./img/att-left.png" />
+          <img src="./img/att-left-arr.png" />
+          <img
+            src="./img/att-joystick.png"
+            style="margin-top: -55px; height: 100px"
+          />
+          <img src="./img/att-right-arr.png" />
+          <img src="./img/att-right.png" />
+        </div>
+      </div>
+
+      <div class="bordered ctrls-fol">
+        <div class="cborder left"></div>
+        <div class="cborder right"></div>
+        <div class="clipped-bg"></div>
+      </div>
+
+      <div class="bordered webgl details">
+        <div class="cborder left"></div>
+        <div class="cborder right"></div>
+        <div class="youtube-container">
+          <iframe
+            width="100%"
+            height="400px"
+            src="https://www.youtube.com/embed/YkadyuliPSs"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <a
+          type="button"
+          class="btn btn-outline-light btn-netflix mx-auto"
+          href="https://www.netflix.com/title/81002370"
+          target="_blank"
+        >
+          Watch on netflix now
+        </a>
+        <div class="popup-container">
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+              accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+              gravida. Risus commodo viverra maecenas accumsan lacus vel
+              facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+              viverra maecenas accumsan lacus vel facilisis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+              accumsan lacus vel facilisis.
+            </p>
+          </div>
+        </div>
+        <div class="cborderbutton"></div>
       </div>
     </div>
+    <footer></footer>
   </body>
 </html>
