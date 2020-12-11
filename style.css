@@ -55,10 +55,10 @@ body {
   z-index: auto;
 }
 .bordered.top .cborder.left {
-  background-image: url("./img/btl.png");
+  background-image: url("./img/btl.webp");
 }
 .bordered.top .cborder.right {
-  background-image: url("./img/btr.png");
+  background-image: url("./img/btr.webp");
 }
 .bordered.top .cborder.left::before,
 .bordered.top .cborder.right::before {
@@ -71,11 +71,11 @@ body {
 }
 .bordered.top .cborder.left::before {
   right: -5px;
-  background-image: url(./img/btlback.png);
+  background-image: url(./img/btlback.webp);
 }
 .bordered.top .cborder.right::before {
   left: -5px;
-  background-image: url(./img/btrback.png);
+  background-image: url(./img/btrback.webp);
 }
 .bordered.top .bulb {
   height: 100%;
@@ -109,10 +109,10 @@ body {
   width: 33px;
 }
 .bordered.top-fol .cborder.left {
-  background-image: url("./img/btlfol.png");
+  background-image: url("./img/btlfol.webp");
 }
 .bordered.top-fol .cborder.right {
-  background-image: url("./img/btrfol.png");
+  background-image: url("./img/btrfol.webp");
 }
 .bordered.top-fol .background {
   height: 100%;
@@ -141,10 +141,10 @@ body {
   width: 21px;
 }
 .bordered.webgl .cborder.left {
-  background-image: url("./img/bwebl.png");
+  background-image: url("./img/bwebl.webp");
 }
 .bordered.webgl .cborder.right {
-  background-image: url("./img/bwebr.png");
+  background-image: url("./img/bwebr.webp");
 }
 .bordered .logos {
   height: 70px;
@@ -189,10 +189,10 @@ body {
   width: 50px;
 }
 .bordered.ctrls .cborder.left {
-  background-image: url("./img/bctrlsl.png");
+  background-image: url("./img/bctrlsl.webp");
 }
 .bordered.ctrls .cborder.right {
-  background-image: url("./img/bctrlsr.png");
+  background-image: url("./img/bctrlsr.webp");
 }
 .bordered.ctrls .logos img {
   margin: 0 3%;
@@ -219,10 +219,10 @@ body {
   width: 50px;
 }
 .bordered.ctrls-fol .cborder.left {
-  background-image: url("./img/bctrlslfol.png");
+  background-image: url("./img/bctrlslfol.webp");
 }
 .bordered.ctrls-fol .cborder.right {
-  background-image: url("./img/bctrlsrfol.png");
+  background-image: url("./img/bctrlsrfol.webp");
 }
 
 .btn-netflix {
@@ -266,7 +266,7 @@ body {
   height: 22px;
   position: absolute;
   background-size: 100% 100%;
-  background-image: url("./img/bbottom.png");
+  background-image: url("./img/bbottom.webp");
 }
 
 .reflection {
