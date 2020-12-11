@@ -10,9 +10,38 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <script>
+      const vw = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
+      const bgs = {
+        xs: "./img/bg-600.webp",
+        sm: "./img/bg-800.webp",
+        md: "./img/bg-1000.webp",
+        lg: "./img/bg-1200.webp",
+        xlg: "./img/bg-1440.webp",
+        full: "./img/bg.webp",
+      };
+      const bg_url =
+        vw <= 600
+          ? bgs.xs
+          : vw <= 800
+          ? bgs.sm
+          : vw <= 1000
+          ? bgs.md
+          : vw <= 1200
+          ? bgs.lg
+          : vw <= 1440
+          ? bgs.xlg
+          : bgs.full;
+    </script>
   </head>
   <body>
-    <div class="container">
+    <script>
+      document.body.style.backgroundImage = `url('${bg_url}')`;
+    </script>
+    <div class="container px-4">
       <div class="moto mx-auto"><img src="./img/moto.png" /></div>
 
       <div class="bordered top">
@@ -36,10 +65,10 @@
       <div class="bordered webgl">
         <div class="cborder left"></div>
         <div class="cborder right"></div>
-        <div class="logos d-flex justify-content-center">
-          <img src="./img/web-snake.png" />
-          <img src="./img/web-netflix.png" />
-          <img src="./img/web-tree.png" />
+        <div class="d-flex flex-row justify-content-center logos">
+          <div class="mx-3"><img src="./img/web-snake.png" /></div>
+          <div><img src="./img/web-netflix.png" /></div>
+          <div class="mx-3"><img src="./img/web-tree.png" /></div>
         </div>
         <div class="webgl-container">
           <img src="./img/webgl.jpg" style="width: 100%" />
@@ -50,15 +79,18 @@
         <div class="cborder left"></div>
         <div class="cborder right"></div>
         <div class="clipped-bg"></div>
-        <div class="logos d-flex justify-content-center">
-          <img src="./img/att-left.png" />
-          <img src="./img/att-left-arr.png" />
-          <img
-            src="./img/att-joystick.webp"
-            style="margin-top: -55px; height: 100px"
-          />
-          <img src="./img/att-right-arr.png" />
-          <img src="./img/att-right.png" />
+        <div class="d-flex flex-row justify-content-center logos">
+          <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
+            <img src="./img/att-left.png" />
+          </div>
+          <div><img src="./img/att-left-arr.png" /></div>
+          <div class="mx-3">
+            <img src="./img/att-joystick.webp" style="margin-top: -85%" />
+          </div>
+          <div><img src="./img/att-right-arr.png" /></div>
+          <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
+            <img src="./img/att-right.png" />
+          </div>
         </div>
       </div>
 
@@ -72,23 +104,25 @@
         <div class="cborder left"></div>
         <div class="cborder right"></div>
         <div class="youtube-container">
-          <!-- <iframe
+          <iframe
             width="100%"
             height="400px"
             src="https://www.youtube.com/embed/LcDQqGJG8pA"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe> -->
+          ></iframe>
         </div>
-        <a
-          type="button"
-          class="btn btn-outline-light btn-netflix mx-auto"
-          href="https://www.netflix.com/title/81002370"
-          target="_blank"
-        >
-          Watch on netflix now
-        </a>
+        <div class="text-center">
+          <a
+            type="button"
+            class="btn btn-outline-light btn-netflix"
+            href="https://www.netflix.com/title/81002370"
+            target="_blank"
+          >
+            Watch on netflix now
+          </a>
+        </div>
         <div class="popup-container">
           <div class="content">
             <p>
@@ -124,7 +158,7 @@
         <div class="cborder right"></div>
         <div class="cborderbutton"></div>
       </div>
-      <div id="reflect-here" style="margin: 0 12px 100px"></div>
+      <div id="reflect-here"></div>
     </div>
     <footer>
       <div class="container">
@@ -163,12 +197,18 @@
         </div>
       </div>
     </footer>
+    <div class="body-wrapper"></div>
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/html2canvas.js"></script>
     <script src="./js/myreflect.js"></script>
     <script>
+      function setCtrlsfolHeight() {
+        const ctrlsDivHeight = $(".ctrls").height();
+        $(".ctrls-fol").height(ctrlsDivHeight);
+      }
       $(document).ready(function () {
+        setCtrlsfolHeight();
         const element = $("#reflect-this");
         html2canvas(element, {
           onrendered: function (canvas) {
@@ -180,6 +220,9 @@
             element.hide();
           },
         });
+      });
+      $(window).resize(function () {
+        setCtrlsfolHeight();
       });
     </script>
   </body>
