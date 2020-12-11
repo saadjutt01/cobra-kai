@@ -75,7 +75,7 @@
           <iframe
             width="100%"
             height="400px"
-            src="https://www.youtube.com/embed/YkadyuliPSs"
+            src="https://www.youtube.com/embed/LcDQqGJG8pA"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -114,7 +114,73 @@
         </div>
         <div class="cborderbutton"></div>
       </div>
+
+      <div
+        id="reflect-this"
+        class="bordered webgl details"
+        style="height: 150px; opacity: 0"
+      >
+        <div class="cborder left"></div>
+        <div class="cborder right"></div>
+        <div class="cborderbutton"></div>
+      </div>
+      <div id="reflect-here" style="margin: 0 12px 100px"></div>
     </div>
-    <footer></footer>
+    <footer>
+      <div class="container">
+        <div class="d-flex flex-column">
+          <div class="m-4 d-flex justify-content-center">
+            <img src="./img/netflix_logo_n.png" />
+          </div>
+          <div class="m-2 d-flex flex-row justify-content-center logos">
+            <a href="#" class="m-3"><img src="./img/logo-insta.png" /></a>
+            <a href="#" class="m-3"><img src="./img/logo-fb.png" /></a>
+            <a href="#" class="m-3"><img src="./img/logo-twit.png" /></a>
+            <a href="#" class="m-3"><img src="./img/logo-tiktok.png" /></a>
+          </div>
+          <div class="m-2 d-flex flex-row justify-content-center">
+            <a href="#" class="mx-5">Privacy Policy</a>
+            <a href="#" class="mx-5">Imprint</a>
+          </div>
+          <hr class="m-2 mx-auto" size />
+          <div class="m-2 d-flex flex-row justify-content-center">
+            <span class="mx-5">Concept, development and hosting by</span>
+          </div>
+          <div class="m-2 d-flex flex-row justify-content-center logos">
+            <a href="#" class="m-3"
+              ><img src="./img/logo-company-david-martin.png"
+            /></a>
+            <a href="#" class="m-3"
+              ><img src="./img/logo-company-frag-games.png"
+            /></a>
+            <a href="#" class="m-3"
+              ><img src="./img/logo-company-wolpertinger-games.png"
+            /></a>
+            <a href="#" class="m-3"
+              ><img src="./img/logo-company-remote-control-productions.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <script src="./js/myreflect.js"></script>
+    <script>
+      $(document).ready(function () {
+        const element = $("#reflect-this");
+        html2canvas(element, {
+          onrendered: function (canvas) {
+            $("#reflect-here").append(canvas);
+            doReflect($("#reflect-here canvas")[0], {
+              height: 1 / 3,
+              opacity: 0.3,
+            });
+            element.hide();
+          },
+        });
+      });
+    </script>
   </body>
 </html>
