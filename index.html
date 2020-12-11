@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Cobra Kai</title>
     <link rel="stylesheet" href="./styles/bootstrap.min.css" />
@@ -41,18 +41,20 @@
     <script>
       document.body.style.backgroundImage = `url('${bg_url}')`;
     </script>
-    <div class="container px-4">
-      <div class="moto mx-auto"><img src="./img/moto.png" /></div>
+    <div class="container px-4 px-sm-0">
+      <div class="moto mx-auto">
+        <img src="./img/moto.png" alt="Strike First Strike Hard No Mercy" />
+      </div>
 
       <div class="bordered top">
         <div class="cborder left"></div>
         <div class="cborder right"></div>
         <div class="bulb left">
-          <img src="./img/top-bulb.png" />
+          <img src="./img/top-bulb.png" alt="top-bulb-left" />
         </div>
-        <img class="logo" src="./img/cobra.png" />
+        <img class="logo" src="./img/cobra.png" alt="cobra" />
         <div class="bulb right">
-          <img src="./img/top-bulb.png" />
+          <img src="./img/top-bulb.png" alt="top-bulb-right" />
         </div>
       </div>
 
@@ -62,18 +64,22 @@
         <div class="background"></div>
       </div>
 
-      <div class="bordered webgl">
+      <main class="bordered webgl">
         <div class="cborder left"></div>
         <div class="cborder right"></div>
         <div class="d-flex flex-row justify-content-center logos">
-          <div class="mx-3"><img src="./img/web-snake.png" /></div>
-          <div><img src="./img/web-netflix.png" /></div>
-          <div class="mx-3"><img src="./img/web-tree.png" /></div>
+          <div class="mx-3"><img src="./img/web-snake.png" alt="snake" /></div>
+          <div><img src="./img/web-netflix.png" alt="netflix" /></div>
+          <div class="mx-3"><img src="./img/web-tree.png" alt="tree" /></div>
         </div>
         <div class="webgl-container">
-          <img src="./img/webgl.jpg" style="width: 100%" />
+          <img
+            src="./img/webgl.jpg"
+            alt="webgl component comes here"
+            style="width: 100%"
+          />
         </div>
-      </div>
+      </main>
 
       <div class="bordered ctrls">
         <div class="cborder left"></div>
@@ -81,15 +87,19 @@
         <div class="clipped-bg"></div>
         <div class="d-flex flex-row justify-content-center logos">
           <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
-            <img src="./img/att-left.png" />
+            <img alt="att-left" src="./img/att-left.png" />
           </div>
-          <div><img src="./img/att-left-arr.png" /></div>
+          <div><img alt="att-left" src="./img/att-left-arr.png" /></div>
           <div class="mx-3">
-            <img src="./img/att-joystick.webp" style="margin-top: -85%" />
+            <img
+              alt="att-joystick"
+              src="./img/att-joystick.webp"
+              style="margin-top: -85%"
+            />
           </div>
-          <div><img src="./img/att-right-arr.png" /></div>
+          <div><img alt="att-right" src="./img/att-right-arr.png" /></div>
           <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
-            <img src="./img/att-right.png" />
+            <img alt="att-right" src="./img/att-right.png" />
           </div>
         </div>
       </div>
@@ -107,6 +117,7 @@
           <iframe
             width="100%"
             height="400px"
+            title="Cobra Kai: Season 3 | Official Trailer | Netflix"
             src="https://www.youtube.com/embed/LcDQqGJG8pA"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -119,6 +130,7 @@
             class="btn btn-outline-light btn-netflix"
             href="https://www.netflix.com/title/81002370"
             target="_blank"
+            rel="noopener"
           >
             Watch on netflix now
           </a>
@@ -164,34 +176,50 @@
       <div class="container">
         <div class="d-flex flex-column">
           <div class="m-4 d-flex justify-content-center">
-            <img src="./img/netflix_logo_n.png" />
+            <img src="./img/netflix_logo_n.png" alt="netflix_logo_n" />
           </div>
-          <div class="m-2 d-flex flex-row justify-content-center logos">
-            <a href="#" class="m-3"><img src="./img/logo-insta.png" /></a>
-            <a href="#" class="m-3"><img src="./img/logo-fb.png" /></a>
-            <a href="#" class="m-3"><img src="./img/logo-twit.png" /></a>
-            <a href="#" class="m-3"><img src="./img/logo-tiktok.png" /></a>
+          <div
+            class="m-2 d-flex flex-row justify-content-center mx-auto logos social-media"
+          >
+            <a href="#" name="insta" class="m-3"
+              ><img src="./img/logo-insta.png" alt="insta"
+            /></a>
+            <a href="#" name="fb" class="m-3"
+              ><img src="./img/logo-fb.png" alt="fb"
+            /></a>
+            <a href="#" name="twit" class="m-3"
+              ><img src="./img/logo-twit.png" alt="twit"
+            /></a>
+            <a href="#" name="tiktok" class="m-3"
+              ><img src="./img/logo-tiktok.png" alt="tiktok"
+            /></a>
           </div>
           <div class="m-2 d-flex flex-row justify-content-center">
-            <a href="#" class="mx-5">Privacy Policy</a>
-            <a href="#" class="mx-5">Imprint</a>
+            <a href="#" name="privacy-policy" class="mx-5">Privacy Policy</a>
+            <a href="#" name="imprint" class="mx-5">Imprint</a>
           </div>
           <hr class="m-2 mx-auto" size />
           <div class="m-2 d-flex flex-row justify-content-center">
             <span class="mx-5">Concept, development and hosting by</span>
           </div>
           <div class="m-2 d-flex flex-row justify-content-center logos">
-            <a href="#" class="m-3"
-              ><img src="./img/logo-company-david-martin.png"
+            <a href="#" name="david-martin" class="m-3"
+              ><img
+                src="./img/logo-company-david-martin.png"
+                alt="david-martin"
             /></a>
-            <a href="#" class="m-3"
-              ><img src="./img/logo-company-frag-games.png"
+            <a href="#" name="frag-games" class="m-3"
+              ><img src="./img/logo-company-frag-games.png" alt="frag-games"
             /></a>
-            <a href="#" class="m-3"
-              ><img src="./img/logo-company-wolpertinger-games.png"
+            <a href="#" name="wolpertinger-games" class="m-3"
+              ><img
+                src="./img/logo-company-wolpertinger-games.png"
+                alt="wolpertinger-games"
             /></a>
-            <a href="#" class="m-3"
-              ><img src="./img/logo-company-remote-control-productions.png"
+            <a href="#" name="remote-control-productions" class="m-3"
+              ><img
+                src="./img/logo-company-remote-control-productions.png"
+                alt="remote-control-productions"
             /></a>
           </div>
         </div>
@@ -199,16 +227,23 @@
     </footer>
     <div class="body-wrapper"></div>
 
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/html2canvas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
     <script src="./js/myreflect.js"></script>
     <script>
       function setCtrlsfolHeight() {
         const ctrlsDivHeight = $(".ctrls").height();
         $(".ctrls-fol").height(ctrlsDivHeight);
       }
+      function setYoutubeVideoHeight() {
+        const width = $(".youtube-container iframe").width();
+        const ratio = 16 / 9;
+        const height = width / ratio;
+        $(".youtube-container iframe").height(height);
+      }
       $(document).ready(function () {
         setCtrlsfolHeight();
+        setYoutubeVideoHeight();
         const element = $("#reflect-this");
         html2canvas(element, {
           onrendered: function (canvas) {
@@ -223,6 +258,7 @@
       });
       $(window).resize(function () {
         setCtrlsfolHeight();
+        setYoutubeVideoHeight();
       });
     </script>
   </body>

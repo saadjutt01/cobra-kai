@@ -157,6 +157,7 @@ body {
 }
 .youtube-container {
   padding: 80px 60px;
+  padding: 10% 5%;
 }
 
 .bordered.ctrls {
@@ -296,6 +297,9 @@ footer {
   );
 }
 
+footer .logos.social-media {
+  max-width: 60%;
+}
 footer .logos img {
   opacity: 0.5;
   width: 100%;
@@ -361,6 +365,9 @@ footer hr {
   #reflect-here {
     margin-bottom: 120px;
   }
+  footer .logos.social-media {
+    max-width: 50%;
+  }
 }
 @media (min-width: 992px) {
   .btn-netflix {
@@ -373,6 +380,9 @@ footer hr {
   }
   .popup-container .content {
     padding: 40px;
+  }
+  footer .logos.social-media {
+    max-width: 40%;
   }
 }
 @media (min-width: 1200px) {
@@ -389,6 +399,9 @@ footer hr {
   }
   #reflect-here {
     margin-bottom: 300px;
+  }
+  footer .logos.social-media {
+    max-width: 30%;
   }
 }
 @media (min-width: 1400px) {
