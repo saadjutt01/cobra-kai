@@ -2,14 +2,19 @@
 <html lang="en">
   <head>
     <title>Cobra Kai</title>
-    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Put your description here. about cobra kai"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
     <script>
       const vw = Math.max(
         document.documentElement.clientWidth || 0,
@@ -43,18 +48,18 @@
     </script>
     <div class="container px-4 px-sm-0">
       <div class="moto mx-auto">
-        <img src="./img/moto.png" alt="Strike First Strike Hard No Mercy" />
+        <img src="./img/moto.webp" alt="Strike First Strike Hard No Mercy" />
       </div>
 
       <div class="bordered top">
         <div class="cborder left"></div>
         <div class="cborder right"></div>
         <div class="bulb left">
-          <img src="./img/top-bulb.png" alt="top-bulb-left" />
+          <img src="./img/top-bulb.webp" alt="top-bulb-left" />
         </div>
-        <img class="logo" src="./img/cobra.png" alt="cobra" />
+        <img class="logo" src="./img/cobra.webp" alt="cobra" />
         <div class="bulb right">
-          <img src="./img/top-bulb.png" alt="top-bulb-right" />
+          <img src="./img/top-bulb.webp" alt="top-bulb-right" />
         </div>
       </div>
 
@@ -67,17 +72,22 @@
       <main class="bordered webgl">
         <div class="cborder left"></div>
         <div class="cborder right"></div>
-        <div class="d-flex flex-row justify-content-center logos">
-          <div class="mx-3"><img src="./img/web-snake.png" alt="snake" /></div>
-          <div><img src="./img/web-netflix.png" alt="netflix" /></div>
-          <div class="mx-3"><img src="./img/web-tree.png" alt="tree" /></div>
+        <div
+          class="d-flex flex-row justify-content-center mx-auto logos responsive"
+        >
+          <div class="mx-3"><img src="./img/web-snake.webp" alt="snake" /></div>
+          <div><img src="./img/web-netflix.webp" alt="netflix" /></div>
+          <div class="mx-2"><img src="./img/web-tree.webp" alt="tree" /></div>
         </div>
         <div class="webgl-container">
-          <img
-            src="./img/webgl.jpg"
-            alt="webgl component comes here"
-            style="width: 100%"
-          />
+          <div class="webgl-content">
+            <div id="unityContainer"></div>
+            <!-- <div class="footer">
+              <div class="webgl-logo"></div>
+              <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+              <div class="title">Cobra_kai</div>
+            </div> -->
+          </div>
         </div>
       </main>
 
@@ -87,9 +97,9 @@
         <div class="clipped-bg"></div>
         <div class="d-flex flex-row justify-content-center logos">
           <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
-            <img alt="att-left" src="./img/att-left.png" />
+            <img alt="att-left" src="./img/att-left.webp" />
           </div>
-          <div><img alt="att-left" src="./img/att-left-arr.png" /></div>
+          <div><img alt="att-left" src="./img/att-left-arr.webp" /></div>
           <div class="mx-3">
             <img
               alt="att-joystick"
@@ -97,9 +107,9 @@
               style="margin-top: -85%"
             />
           </div>
-          <div><img alt="att-right" src="./img/att-right-arr.png" /></div>
+          <div><img alt="att-right" src="./img/att-right-arr.webp" /></div>
           <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
-            <img alt="att-right" src="./img/att-right.png" />
+            <img alt="att-right" src="./img/att-right.webp" />
           </div>
         </div>
       </div>
@@ -176,22 +186,22 @@
       <div class="container">
         <div class="d-flex flex-column">
           <div class="m-4 d-flex justify-content-center">
-            <img src="./img/netflix_logo_n.png" alt="netflix_logo_n" />
+            <img src="./img/netflix_logo_n.webp" alt="netflix_logo_n" />
           </div>
           <div
-            class="m-2 d-flex flex-row justify-content-center mx-auto logos social-media"
+            class="m-2 d-flex flex-row justify-content-center mx-auto logos responsive"
           >
             <a href="#" name="insta" class="m-3"
-              ><img src="./img/logo-insta.png" alt="insta"
+              ><img src="./img/logo-insta.webp" alt="insta"
             /></a>
             <a href="#" name="fb" class="m-3"
-              ><img src="./img/logo-fb.png" alt="fb"
+              ><img src="./img/logo-fb.webp" alt="fb"
             /></a>
             <a href="#" name="twit" class="m-3"
-              ><img src="./img/logo-twit.png" alt="twit"
+              ><img src="./img/logo-twit.webp" alt="twit"
             /></a>
             <a href="#" name="tiktok" class="m-3"
-              ><img src="./img/logo-tiktok.png" alt="tiktok"
+              ><img src="./img/logo-tiktok.webp" alt="tiktok"
             /></a>
           </div>
           <div class="m-2 d-flex flex-row justify-content-center">
@@ -205,20 +215,20 @@
           <div class="m-2 d-flex flex-row justify-content-center logos">
             <a href="#" name="david-martin" class="m-3"
               ><img
-                src="./img/logo-company-david-martin.png"
+                src="./img/logo-company-david-martin.webp"
                 alt="david-martin"
             /></a>
             <a href="#" name="frag-games" class="m-3"
-              ><img src="./img/logo-company-frag-games.png" alt="frag-games"
+              ><img src="./img/logo-company-frag-games.webp" alt="frag-games"
             /></a>
             <a href="#" name="wolpertinger-games" class="m-3"
               ><img
-                src="./img/logo-company-wolpertinger-games.png"
+                src="./img/logo-company-wolpertinger-games.webp"
                 alt="wolpertinger-games"
             /></a>
             <a href="#" name="remote-control-productions" class="m-3"
               ><img
-                src="./img/logo-company-remote-control-productions.png"
+                src="./img/logo-company-remote-control-productions.webp"
                 alt="remote-control-productions"
             /></a>
           </div>
@@ -230,17 +240,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
     <script src="./js/myreflect.js"></script>
+    <script src="./TemplateData/UnityProgress.js"></script>
     <script>
-      function setCtrlsfolHeight() {
-        const ctrlsDivHeight = $(".ctrls").height();
-        $(".ctrls-fol").height(ctrlsDivHeight);
-      }
-      function setYoutubeVideoHeight() {
-        const width = $(".youtube-container iframe").width();
-        const ratio = 16 / 9;
-        const height = width / ratio;
-        $(".youtube-container iframe").height(height);
-      }
       $(document).ready(function () {
         setCtrlsfolHeight();
         setYoutubeVideoHeight();
@@ -255,11 +256,32 @@
             element.hide();
           },
         });
+        // setupWebGL();
       });
       $(window).resize(function () {
         setCtrlsfolHeight();
         setYoutubeVideoHeight();
       });
+
+      function setCtrlsfolHeight() {
+        const ctrlsDivHeight = $(".ctrls").height();
+        $(".ctrls-fol").height(ctrlsDivHeight);
+      }
+      function setYoutubeVideoHeight() {
+        const width = $(".youtube-container iframe").width();
+        const ratio = 16 / 9;
+        const height = width / ratio;
+        $(".youtube-container iframe").height(height);
+      }
+      function setupWebGL() {
+        $.getScript("Build/UnityLoader.js", function () {
+          const unityInstance = UnityLoader.instantiate(
+            "unityContainer",
+            "Build/C_B.json",
+            { onProgress: UnityProgress }
+          );
+        });
+      }
     </script>
   </body>
 </html>
