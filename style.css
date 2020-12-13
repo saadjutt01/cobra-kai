@@ -1,5 +1,14 @@
+/*@font-face {
+  font-family: "GiantBackground";
+  src: url("./fonts/giant-background/giant-background.otf") format("opentype");
+}*/
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/oswald/Oswald-VariableFont_wght.ttf") format("opentype");
+}
 body {
-  font-family: "Bebas Neue", cursive;
+  /*font-family: GiantBackground;*/
+  font-family: Oswald;
   text-transform: uppercase;
   background-size: 100%;
   color: white;
@@ -274,10 +283,11 @@ a.highlighted:active {
   right: 0;
 }
 .menu-icon.lang {
-  padding-top: 3px;
+  /*padding-top: 3px;*/
   border-color: white;
   box-shadow: none;
   color: white;
+  text-transform: uppercase;
 }
 .menu-icon .bar {
   width: 100%;
