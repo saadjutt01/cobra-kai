@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <title>Cobra Kai</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <meta
       name="description"
       content="Put your description here. about cobra kai"
@@ -46,7 +49,28 @@
     <script>
       document.body.style.backgroundImage = `url('${bg_url}')`;
     </script>
+    <div class="menu-open" style="display: none">
+      <div class="container px-4 px-sm-0">
+        <div style="position: relative">
+          <div id="menu-button-close" class="btn-custom menu-icon close left">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <button class="btn-custom menu-icon right lang">EN</button>
+        </div>
+      </div>
+    </div>
     <div class="container px-4 px-sm-0">
+      <div style="position: relative">
+        <div id="menu-button" class="btn-custom menu-icon left">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <button class="btn-custom menu-icon right lang">EN</button>
+      </div>
+
       <div class="moto mx-auto">
         <img src="./img/moto.webp" alt="Strike First Strike Hard No Mercy" />
       </div>
@@ -302,6 +326,19 @@
 
         startAnimation();
         setInterval(startAnimation, 1000);
+
+        $("#menu-button").click(function (e) {
+          e.stopPropagation();
+          $(".menu-open").slideDown("fast");
+        });
+        $("#menu-button-close").click(function () {
+          $(".menu-open").slideUp("fast");
+        });
+        $(document).on("click", function(event){
+          if (!event.target.classList.contains("menu-open") && $(event.target).parents('.menu-open').length == 0 ){
+            $(".menu-open").slideUp("fast");
+          }
+        });
       });
       $(window).resize(function () {
         setCtrlsfolHeight();

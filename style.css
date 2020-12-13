@@ -226,8 +226,82 @@ body {
   background-image: url("./img/bctrlsrfol.webp");
 }
 
+.btn-custom {
+  color: #ffaffc;
+  border: 2px solid #ffaffc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #663664;
+}
+.btn-custom:hover,
+.btn-custom:active {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #ff87fb;
+  border-color: #ff87fb;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  padding: 0 3px;
+  position: absolute;
+  top: 20px;
+  background-color: transparent;
+}
+.menu-icon.left {
+  left: 0;
+}
+.menu-icon.right {
+  right: 0;
+}
+.menu-icon.lang {
+  padding-top: 3px;
+  border-color: white;
+  box-shadow: none;
+  color: white;
+}
+.menu-icon .bar {
+  width: 100%;
+  height: 2px;
+  background-color: #ffaffc;
+  margin: 25% 0;
+}
+
+.btn-custom.close {
+  border-color: red;
+  box-shadow: none;
+}
+.btn-custom.close:hover,
+.btn-custom.close:active {
+  box-shadow: 0px 0px 5px 2px #cc0000;
+  border-color: red;
+}
+
+.menu-icon.close .bar {
+  background-color: red;
+}
+.menu-icon.close .bar:first-child {
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+.menu-icon.close .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.close .bar:last-child {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+.menu-open {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  z-index: 30;
+}
+
 .btn-netflix {
   color: #ffaffc;
+  background-color: transparent;
   border: 2px solid #ffaffc;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #663664;
