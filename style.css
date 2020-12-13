@@ -20,9 +20,13 @@ a {
 }
 a:hover,
 a:active {
-  color: white;
+  /*color: white;*/
+  color: #ffaffc;
+  text-shadow: 0px 0px 5px #663664;
+  text-shadow: 0px 0px 5px #ffaffc;
   opacity: 1;
 }
+/*
 a.highlighted {
   color: #ffaffc;
   text-shadow: 0px 0px 5px #663664;
@@ -32,6 +36,7 @@ a.highlighted:hover,
 a.highlighted:active {
   text-shadow: 0px 0px 5px #ffaffc;
 }
+*/
 .moto {
   width: 50%;
 }
