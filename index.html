@@ -101,20 +101,57 @@
         <div class="cborder right"></div>
         <div class="clipped-bg"></div>
         <div class="d-flex flex-row justify-content-center logos">
-          <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
-            <img alt="att-left" src="./img/att-left.webp" />
+          <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5 my-2">
+            <img alt="att-left" id="att-left-t" src="./img/att-left.png" />
+            <img
+              alt="att-left"
+              id="att-left-t-pressed"
+              src="./img/att-left-pressed.png"
+              style="display: none"
+            />
           </div>
-          <div><img alt="att-left" src="./img/att-left-arr.webp" /></div>
+          <div>
+            <img
+              alt="att-left"
+              id="att-left-arr"
+              src="./img/att-left-arr.png"
+            />
+            <img
+              alt="att-left"
+              id="att-left-arr-pressed"
+              src="./img/att-left-arr-pressed.webp"
+              style="display: none"
+            />
+          </div>
           <div class="mx-3">
             <img
               alt="att-joystick"
-              src="./img/att-joystick.webp"
+              id="att-joystick"
+              src="./img/att-joystick.png"
               style="margin-top: -85%"
             />
           </div>
-          <div><img alt="att-right" src="./img/att-right-arr.webp" /></div>
-          <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
-            <img alt="att-right" src="./img/att-right.webp" />
+          <div>
+            <img
+              alt="att-right"
+              id="att-right-arr"
+              src="./img/att-right-arr.png"
+            />
+            <img
+              alt="att-right"
+              id="att-right-arr-pressed"
+              src="./img/att-right-arr-pressed.webp"
+              style="display: none"
+            />
+          </div>
+          <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5 my-2">
+            <img alt="att-right" id="att-right-t" src="./img/att-right.png" />
+            <img
+              alt="att-right"
+              id="att-right-t-pressed"
+              src="./img/att-right-pressed.png"
+              style="display: none"
+            />
           </div>
         </div>
       </div>
@@ -262,6 +299,8 @@
           },
         });
         // setupWebGL();
+        startAnimation();
+        setInterval(startAnimation, 1000);
       });
       $(window).resize(function () {
         setCtrlsfolHeight();

@@ -47,3 +47,20 @@ function doReflect(img, options) {
       })[0];
   }
 }
+
+function startAnimation() {
+  // animationAttackLeft();
+  $('[id^="att-left"]').toggle();
+  setTimeout(function () {
+    // animationAttackNone();
+    $('[id^="att-left"]').toggle();
+  }, 250);
+  setTimeout(function () {
+    // animationAttackRight();
+    $('[id^="att-right"]').toggle();
+  }, 500);
+  setTimeout(function () {
+    // animationAttackNone();
+    $('[id^="att-right"]').toggle();
+  }, 750);
+}
