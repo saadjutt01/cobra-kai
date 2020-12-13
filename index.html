@@ -79,12 +79,12 @@
           <div><img src="./img/web-netflix.webp" alt="netflix" /></div>
           <div class="mx-2"><img src="./img/web-tree.webp" alt="tree" /></div>
         </div>
-        <img
-          src="./img/webgl.jpg"
-          alt="webgl component comes here"
-          style="width: 100%"
-        />
-        <div class="webgl-container">
+        <div class="mt-2 mx-2 mx-sm-3 mx-md-4 mx-lg-5 mb-4">
+          <img
+            src="./img/webgl.jpg"
+            alt="webgl component comes here"
+            style="width: 100%"
+          />
           <div class="webgl-content">
             <div id="unityContainer"></div>
             <!-- <div class="footer">
@@ -103,12 +103,12 @@
         <div class="d-flex flex-row justify-content-center logos">
           <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5 my-2 my-md-3 my-xl-4">
             <img alt="att-left" id="att-left-t" src="./img/att-left.png" />
-            <img
+            <!-- <img
               alt="att-left"
               id="att-left-t-pressed"
               src="./img/att-left-pressed.png"
               style="display: none"
-            />
+            /> -->
           </div>
           <div>
             <img
@@ -146,12 +146,12 @@
           </div>
           <div class="mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5 my-2 my-md-3 my-xl-4">
             <img alt="att-right" id="att-right-t" src="./img/att-right.png" />
-            <img
+            <!-- <img
               alt="att-right"
               id="att-right-t-pressed"
               src="./img/att-right-pressed.png"
               style="display: none"
-            />
+            /> -->
           </div>
         </div>
       </div>
@@ -325,6 +325,9 @@
             "Build/C_B.json",
             { onProgress: UnityProgress }
           );
+          setTimeout(function () {
+            $("#unityContainer").css("background", "transparent");
+          }, 3000);
         });
       }
     </script>

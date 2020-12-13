@@ -50,17 +50,17 @@ function doReflect(img, options) {
 
 function startAnimation() {
   // animationAttackLeft();
-  $('[id^="att-left"]').toggle();
+  $('[id^="att-left-arr"]').toggle();
   setTimeout(function () {
     // animationAttackNone();
-    $('[id^="att-left"]').toggle();
+    $('[id^="att-left-arr"]').toggle();
   }, 250);
   setTimeout(function () {
     // animationAttackRight();
-    $('[id^="att-right"]').toggle();
+    $('[id^="att-right-arr"]').toggle();
   }, 500);
   setTimeout(function () {
     // animationAttackNone();
-    $('[id^="att-right"]').toggle();
+    $('[id^="att-right-arr"]').toggle();
   }, 750);
 }
