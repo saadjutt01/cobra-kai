@@ -131,7 +131,7 @@ a.highlighted:active {
   display: block;
   margin: 0 auto;
   height: auto;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .bordered.top-fol {
@@ -431,7 +431,7 @@ footer {
 }
 
 .logos.responsive {
-  max-width: 60%;
+  max-width: 50%;
 }
 footer .logos img {
   opacity: 0.5;
@@ -516,10 +516,13 @@ footer hr {
     margin-bottom: 120px;
   }
   .logos.responsive {
-    max-width: 50%;
+    max-width: 40%;
   }
 }
 @media (min-width: 992px) {
+  .bordered.top .logo {
+    max-width: 80%;
+  }
   .menu-open a {
     font-size: 24px;
   }
@@ -539,7 +542,7 @@ footer hr {
     padding: 40px;
   }
   .logos.responsive {
-    max-width: 40%;
+    max-width: 30%;
   }
 }
 @media (min-width: 1200px) {
@@ -565,7 +568,7 @@ footer hr {
     margin-bottom: 300px;
   }
   .logos.responsive {
-    max-width: 30%;
+    max-width: 20%;
   }
 }
 @media (min-width: 1400px) {

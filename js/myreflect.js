@@ -49,18 +49,49 @@ function doReflect(img, options) {
 }
 
 function startAnimation() {
-  // animationAttackLeft();
   $('[id^="att-left-arr"]').toggle();
+  $("#att-joystick-center").hide();
+  $("#att-joystick-left").show();
+
   setTimeout(function () {
-    // animationAttackNone();
     $('[id^="att-left-arr"]').toggle();
+    $("#att-joystick-left").hide();
+    $("#att-joystick-center").show();
   }, 250);
+
   setTimeout(function () {
-    // animationAttackRight();
-    $('[id^="att-right-arr"]').toggle();
-  }, 500);
+    $('[id^="att-left-arr"]').toggle();
+    $("#att-joystick-center").hide();
+    $("#att-joystick-left").show();
+  }, 550);
+
   setTimeout(function () {
-    // animationAttackNone();
-    $('[id^="att-right-arr"]').toggle();
+    $('[id^="att-left-arr"]').toggle();
+    $("#att-joystick-left").hide();
+    $("#att-joystick-center").show();
   }, 750);
+
+  setTimeout(function () {
+    $('[id^="att-right-arr"]').toggle();
+    $("#att-joystick-center").hide();
+    $("#att-joystick-right").show();
+  }, 1000);
+
+  setTimeout(function () {
+    $('[id^="att-right-arr"]').toggle();
+    $("#att-joystick-right").hide();
+    $("#att-joystick-center").show();
+  }, 1250);
+
+  setTimeout(function () {
+    $('[id^="att-right-arr"]').toggle();
+    $("#att-joystick-center").hide();
+    $("#att-joystick-right").show();
+  }, 1500);
+
+  setTimeout(function () {
+    $('[id^="att-right-arr"]').toggle();
+    $("#att-joystick-right").hide();
+    $("#att-joystick-center").show();
+  }, 1750);
 }
