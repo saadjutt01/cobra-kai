@@ -3,6 +3,8 @@
   <head>
     <title>Cobra Kai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
     <meta
       name="description"
       content="Put your description here. about cobra kai"
@@ -154,6 +156,7 @@
         </div>
         <div class="mt-2 mx-2 mx-sm-3 mx-md-4 mx-lg-5 mb-4">
           <img
+            id="webgl-alt-img"
             src="./img/webgl.jpg"
             alt="webgl component comes here"
             style="width: 100%"
@@ -410,7 +413,7 @@
             element.hide();
           },
         });
-        // setupWebGL();
+        setupWebGL();
 
         startAnimation();
         setInterval(startAnimation, 2000);
@@ -452,6 +455,7 @@
       }
       function setupWebGL() {
         $.getScript("Build/UnityLoader.js", function () {
+          $("#webgl-alt-img").hide()
           const unityInstance = UnityLoader.instantiate(
             "unityContainer",
             "Build/C_B.json",

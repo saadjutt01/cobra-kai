@@ -398,7 +398,7 @@ a.highlighted:active {
   border: 2px solid #ffaffc;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #663664;
-  /*font-size: 36px;*/
+  font-size: 22px;
   font-weight: 400;
   padding: 6px 15px 4px;
   padding: 2px 7px;
@@ -541,7 +541,7 @@ footer hr {
     margin: -30px 0 5px;
   }
   .btn-netflix {
-    font-size: 16px;
+    font-size: 22px;
     padding: 6px 20px 4px;
     padding: 0px 8px;
   }
@@ -562,7 +562,7 @@ footer hr {
     margin: -33px 0 0;
   }
   .btn-netflix {
-    font-size: 20px;
+    font-size: 26px;
     padding: 8px 20px 6px;
     padding: 0px 9px;
   }
@@ -596,7 +596,7 @@ footer hr {
     margin: -44px 0 0;
   }
   .btn-netflix {
-    font-size: 24px;
+    font-size: 32px;
     padding: 8px 25px 6px;
     padding: 0px 10px;
   }
@@ -624,7 +624,7 @@ footer hr {
     margin: -55px 0 10px;
   }
   .btn-netflix {
-    font-size: 30px;
+    font-size: 38px;
     padding: 10px 30px 8px;
     padding: 0px 11px;
   }
