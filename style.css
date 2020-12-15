@@ -453,6 +453,9 @@ a.highlighted:active {
 #reflect-here {
   margin: 0 12px 20px;
 }
+html:lang(de) #reflect-here {
+  margin-bottom: 100px;
+}
 
 footer {
   /*margin-top: 400px;*/
@@ -573,6 +576,9 @@ footer hr {
   #reflect-here {
     margin-bottom: 120px;
   }
+  html:lang(de) #reflect-here {
+    margin-bottom: 180px;
+  }
   .logos.responsive {
     max-width: 40%;
   }
@@ -603,6 +609,9 @@ footer hr {
   .popup-container {
     font-size: 22px;
     margin: 20px 40px 40px;
+  }
+  html:lang(de) #reflect-here {
+    margin-bottom: 220px;
   }
   .popup-container .content {
     padding: 40px;
@@ -638,6 +647,9 @@ footer hr {
   #reflect-here {
     margin-bottom: 300px;
   }
+  html:lang(de) #reflect-here {
+    margin-bottom: 450px;
+  }
   .logos.responsive {
     max-width: 20%;
   }
@@ -665,5 +677,8 @@ footer hr {
   }
   #reflect-here {
     margin-bottom: 500px;
+  }
+  html:lang(de) #reflect-here {
+    margin-bottom: 600px;
   }
 }
