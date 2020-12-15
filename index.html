@@ -35,6 +35,11 @@
           : vw <= 1440
           ? bgs.xlg
           : bgs.full;
+      const noMercy = {
+        md: "./img/moto-450.png",
+        full: "./img/moto.png",
+      };
+      const moto_url = vw <= 991 ? noMercy.md : noMercy.full;
     </script>
   </head>
   <body>
@@ -49,7 +54,13 @@
             <div class="bar"></div>
             <div class="bar"></div>
           </div>
-          <button class="btn-custom menu-icon right lang">EN</button>
+          <button
+            onclick="loadLanguage(true)"
+            disabled
+            class="btn-custom menu-icon right lang"
+          >
+            EN
+          </button>
           <ul class="menu-list">
             <li><a data-lang="play-game" href="#play-game">Play Game</a></li>
             <li>
@@ -60,13 +71,17 @@
                 >Watch Trailer</a
               >
             </li>
-            <li><a data-lang="privacy" href="#footer">Privacy</a></li>
-            <li><a data-lang="imprint" href="#footer">Imprint</a></li>
+            <li>
+              <a data-lang="privacy" onclick="overlay('privacy')">Privacy</a>
+            </li>
+            <li>
+              <a data-lang="imprint" onclick="overlay('imprint')">Imprint</a>
+            </li>
           </ul>
-          <div class="langs">
-            <a href="#" class="mx-2" onclick="loadLanguage('en')">English</a>
-            <a href="#" class="mx-2" onclick="loadLanguage('de')">Deutsch</a>
-          </div>
+          <!-- <div class="langs">
+            <a class="mx-2" onclick="loadLanguage('en')">English</a>
+            <a class="mx-2" onclick="loadLanguage('de')">Deutsch</a>
+          </div> -->
           <div class="logos">
             <a href="https://www.instagram.com/netflix" name="insta"
               ><img src="./img/logo-insta.png" alt="insta"
@@ -91,13 +106,20 @@
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-        <button id="menu-button-lang" class="btn-custom menu-icon right lang">
+        <button
+          onclick="loadLanguage(true)"
+          disabled
+          class="btn-custom menu-icon right lang"
+        >
           EN
         </button>
       </div>
 
       <div class="moto mx-auto">
-        <img src="./img/moto.png" alt="Strike First Strike Hard No Mercy" />
+        <img id="moto" alt="Strike First Strike Hard No Mercy" />
+        <script>
+          document.getElementById("moto").src = moto_url;
+        </script>
       </div>
 
       <div class="bordered top">
@@ -106,7 +128,7 @@
         <div class="bulb left">
           <img src="./img/top-bulb.png" alt="top-bulb-left" />
         </div>
-        <img class="logo" src="./img/cobra-new.png" alt="cobra" />
+        <img class="logo" src="./img/cobra-new-2.png" alt="cobra" />
         <div class="bulb right">
           <img src="./img/top-bulb.png" alt="top-bulb-right" />
         </div>
@@ -125,7 +147,7 @@
           class="d-flex flex-row justify-content-center mx-auto logos responsive"
         >
           <!-- <div class="mx-3"><img src="./img/web-snake.png" alt="snake" /></div> -->
-          <div class="mx-auto w-75">
+          <div class="mx-auto w-50">
             <img src="./img/web-netflix.png" alt="netflix" />
           </div>
           <!-- <div class="mx-2"><img src="./img/web-tree.png" alt="tree" /></div> -->
@@ -174,7 +196,7 @@
               style="display: none"
             />
           </div>
-          <div class="mx-3">
+          <div class="mx-3" style="position: relative">
             <img
               alt="att-joystick-left"
               id="att-joystick-left"
@@ -193,6 +215,7 @@
               src="./img/att-joystick-right.png"
               style="margin-top: -40%; display: none"
             />
+            <img id="att-joystick-base" src="./img/att-joystick-base.png" />
           </div>
           <div>
             <img
@@ -310,10 +333,18 @@
             /></a>
           </div>
           <div class="m-2 d-flex flex-row justify-content-center">
-            <a href="#" name="privacy-policy" data-lang="privacy" class="mx-5"
+            <a
+              name="privacy-policy"
+              data-lang="privacy"
+              onclick="overlay('privacy')"
+              class="mx-5"
               >Privacy Policy</a
             >
-            <a href="#" name="imprint" data-lang="imprint" class="mx-5"
+            <a
+              name="imprint"
+              data-lang="imprint"
+              onclick="overlay('imprint')"
+              class="mx-5"
               >Imprint</a
             >
           </div>
@@ -323,7 +354,7 @@
               >Concept, development and hosting by</span
             >
           </div>
-          <div class="m-2 d-flex flex-row justify-content-center logos">
+          <div class="m-2 d-flex flex-row justify-content-center logos mx-auto">
             <a
               href="https://www.davidundmartin.com/"
               name="david-martin"
@@ -364,6 +395,7 @@
     <script src="./TemplateData/UnityProgress.js"></script>
     <script>
       $(document).ready(function () {
+        $(".menu-icon.lang").prop("disabled", false);
         loadLanguage();
         setCtrlsfolHeight();
         setYoutubeVideoHeight();
@@ -383,12 +415,16 @@
         startAnimation();
         setInterval(startAnimation, 2000);
 
-        $("#menu-button, #menu-button-lang").click(function (e) {
+        $("#menu-button").click(function (e) {
           e.stopPropagation();
           $(".menu-open").slideDown("fast");
         });
         $("#menu-button-close").click(function () {
           $(".menu-open").slideUp("fast");
+        });
+        $(".overlay").click(function (e) {
+          e.stopPropagation();
+          $(".overlay").hide();
         });
         $(document).on("click", function (event) {
           if (
@@ -426,30 +462,35 @@
           }, 3000);
         });
       }
-      function loadLanguage(lang = null) {
-        if (lang === null) {
+
+      function loadLanguage(toggle = false) {
+        let lang = "";
+        if (toggle) {
+          lang = String.locale == "en" ? "de" : "en";
+        } else {
           if (typeof Storage !== "undefined") {
             // Code for localStorage/sessionStorage.
             lang = localStorage.getItem("lang");
           } else {
             // Sorry! No Web Storage support..
           }
-        }
-
-        if (languages_available.includes(lang)) {
-          String.locale = lang;
-
-          $(".menu-icon.lang").text(lang);
-
-          for (const translation of translations) {
-            const element = $('[data-lang="' + translation + '"]');
-            const translated = localize(`%${translation}`, element.text());
-            element.text(translated);
+          if (!languages_available.includes(lang)) {
+            lang = "en";
           }
-          document.documentElement.lang = String.locale;
-          localStorage.setItem("lang", String.locale);
         }
+        String.locale = lang;
+
+        $(".menu-icon.lang").text(lang);
+
+        for (const translation of translations) {
+          const element = $('[data-lang="' + translation + '"]');
+          const translated = localize(`%${translation}`, element.text());
+          element.text(translated);
+        }
+        document.documentElement.lang = String.locale;
+        localStorage.setItem("lang", String.locale);
       }
+
       function localize(string, fallback) {
         const localized = string.toLocaleString();
         if (localized !== string) {
@@ -458,6 +499,15 @@
           return fallback;
         }
       }
+      function overlay(overlay) {
+        $(`#overlay-${overlay}`).show();
+      }
     </script>
+    <div id="overlay-privacy" class="overlay">
+      <div data-lang="overlay-privacy"></div>
+    </div>
+    <div id="overlay-imprint" class="overlay">
+      <div data-lang="overlay-imprint"></div>
+    </div>
   </body>
 </html>

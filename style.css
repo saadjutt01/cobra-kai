@@ -13,10 +13,26 @@ body {
   background-size: 100%;
   color: white;
 }
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 30;
+  cursor: pointer;
+}
+
 a {
   color: white;
   text-decoration: none;
   opacity: 0.5;
+  cursor: pointer;
 }
 a:hover,
 a:active {
@@ -38,7 +54,7 @@ a.highlighted:active {
 }
 */
 .moto {
-  width: 50%;
+  width: 60%;
 }
 .moto img {
   width: 100%;
@@ -98,7 +114,7 @@ a.highlighted:active {
   position: absolute;
   width: 100%;
   z-index: -1;
-  height: 10px;
+  height: 20px;
   content: " ";
   background-size: 100% 100%;
 }
@@ -264,13 +280,19 @@ a.highlighted:active {
   color: #ffaffc;
   border: 2px solid #ffaffc;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #663664;
+  /*box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #663664;*/
 }
 .btn-custom:hover,
 .btn-custom:active {
   cursor: pointer;
-  box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #ff87fb;
+  /*box-shadow: 0px 0px 5px 4px #ff87fb;*/
   border-color: #ff87fb;
+  background-color: #ffaffc;
+  color: black;
+}
+.btn-custom:hover .bar,
+.btn-custom:active .bar {
+  background-color: black;
 }
 
 .menu-icon {
@@ -294,6 +316,11 @@ a.highlighted:active {
   color: white;
   text-transform: uppercase;
 }
+.menu-icon.lang:hover,
+.menu-icon.lang:active {
+  background-color: white;
+  color: black;
+}
 .menu-icon .bar {
   width: 100%;
   height: 2px;
@@ -307,12 +334,17 @@ a.highlighted:active {
 }
 .btn-custom.close:hover,
 .btn-custom.close:active {
-  box-shadow: 0px 0px 5px 2px #cc0000;
+  /*box-shadow: 0px 0px 5px 2px #cc0000;*/
   border-color: red;
+  background-color: red;
 }
 
 .menu-icon.close .bar {
   background-color: red;
+}
+.menu-icon.close:hover .bar,
+.menu-icon.close:active .bar {
+  background-color: black;
 }
 .menu-icon.close .bar:first-child {
   -webkit-transform: rotate(-45deg) translate(-5px, 5px);
@@ -343,6 +375,7 @@ a.highlighted:active {
   list-style-type: none;
   padding-left: 3rem;
   padding-top: 3rem;
+  margin-bottom: 0.5rem;
 }
 .menu-open ul.menu-list li {
   margin: 5px 0;
@@ -368,6 +401,7 @@ a.highlighted:active {
   /*font-size: 36px;*/
   font-weight: 400;
   padding: 6px 15px 4px;
+  padding: 2px 7px;
 }
 .btn-netflix:hover,
 .btn-netflix:active {
@@ -392,6 +426,10 @@ a.highlighted:active {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+.popup-container .content p {
+  margin-bottom: 1.5rem;
 }
 
 .bordered.details .cborderbutton {
@@ -433,6 +471,9 @@ footer {
 .logos.responsive {
   max-width: 50%;
 }
+footer .logos {
+  width: 100%;
+}
 footer .logos img {
   opacity: 0.5;
   width: 100%;
@@ -468,9 +509,20 @@ footer hr {
   );
 }
 
+#att-joystick-base {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  top: 36%;
+}
+
 @media (min-width: 490px) {
   .popup-container {
     margin: 20px 20px 40px;
+  }
+  #att-joystick-base {
+    top: 32%;
   }
 }
 @media (min-width: 530px) {
@@ -480,7 +532,7 @@ footer hr {
 }
 @media (min-width: 576px) {
   .menu-open a {
-    font-size: 16px;
+    font-size: 14px;
   }
   .menu-open .logos {
     float: right;
@@ -491,22 +543,28 @@ footer hr {
   .btn-netflix {
     font-size: 16px;
     padding: 6px 20px 4px;
+    padding: 0px 8px;
   }
   .popup-container {
     font-size: 14px;
   }
+  footer .logos {
+    width: 80%;
+  }
 }
 @media (min-width: 768px) {
   .menu-open a {
-    font-size: 20px;
+    font-size: 16px;
   }
   .menu-open .logos {
     height: 20px;
     margin: -35px 0 10px;
+    margin: -33px 0 0;
   }
   .btn-netflix {
     font-size: 20px;
     padding: 8px 20px 6px;
+    padding: 0px 9px;
   }
   .popup-container {
     font-size: 18px;
@@ -518,21 +576,29 @@ footer hr {
   .logos.responsive {
     max-width: 40%;
   }
+  #att-joystick-base {
+    top: 18%;
+  }
+  footer .logos {
+    width: 70%;
+  }
 }
 @media (min-width: 992px) {
   .bordered.top .logo {
     max-width: 80%;
   }
   .menu-open a {
-    font-size: 24px;
+    font-size: 20px;
   }
   .menu-open .logos {
     height: 30px;
     margin: -40px 0 15px;
+    margin: -44px 0 0;
   }
   .btn-netflix {
     font-size: 24px;
     padding: 8px 25px 6px;
+    padding: 0px 10px;
   }
   .popup-container {
     font-size: 22px;
@@ -544,18 +610,23 @@ footer hr {
   .logos.responsive {
     max-width: 30%;
   }
+  footer .logos {
+    width: 50%;
+  }
 }
 @media (min-width: 1200px) {
   .menu-open a {
-    font-size: 30px;
+    font-size: 26px;
   }
   .menu-open .logos {
     height: 40px;
     margin: -50px 0 15px;
+    margin: -55px 0 10px;
   }
   .btn-netflix {
     font-size: 30px;
     padding: 10px 30px 8px;
+    padding: 0px 11px;
   }
   .popup-container {
     font-size: 28px;
@@ -573,15 +644,17 @@ footer hr {
 }
 @media (min-width: 1400px) {
   .menu-open a {
-    font-size: 36px;
+    font-size: 32px;
   }
   .menu-open .logos {
     height: 50px;
     margin: -70px 0 30px;
+    margin: -67px 0 0;
   }
   .btn-netflix {
     font-size: 36px;
     padding: 12px 40px 10px;
+    padding: 0px 12px;
   }
   .popup-container {
     font-size: 34px;

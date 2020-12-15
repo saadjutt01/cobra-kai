@@ -13,6 +13,8 @@ String.toLocaleString({
     "%following-trailer-3":
       "With a new sensei at the helm of the Cobra Kai dojo, a three-way feud takes center stage. Old grudges — like Cobra Kai — never die.",
     "%concept-by": "Concept, development and hosting by",
+    "%overlay-privacy": "Privacy content in English",
+    "%overlay-imprint": "Imprint content in English",
   },
   de: {
     "%play-game": "Jetzt spielen",
@@ -28,6 +30,8 @@ String.toLocaleString({
     "%following-trailer-3":
       "Mit einem neuen Sensei an der Spitze des Cobra Kai Dojo dreht sich plötzlich alles um eine Dreier-Fehde. Und alter Groll - wie Cobra Kai - stirbt nie.",
     "%concept-by": "Konzept, Entwicklung und Hosting von",
+    "%overlay-privacy": "Privacy content in German",
+    "%overlay-imprint": "Imprint content in German",
   },
 });
 
@@ -42,4 +46,6 @@ const translations = [
   "following-trailer-2",
   "following-trailer-3",
   "concept-by",
+  "overlay-privacy",
+  "overlay-imprint",
 ];
