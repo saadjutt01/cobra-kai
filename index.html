@@ -49,7 +49,7 @@
       document.body.style.backgroundImage = `url('${bg_url}')`;
     </script>
     <div class="menu-open" style="display: none">
-      <div class="container px-4 px-sm-0">
+      <div class="container-fluid px-4">
         <div style="position: relative">
           <div id="menu-button-close" class="btn-custom menu-icon close left">
             <div class="bar"></div>
@@ -101,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div class="container px-4 px-sm-0">
+    <div class="container-fluid px-4">
       <div style="position: relative">
         <div id="menu-button" class="btn-custom menu-icon left">
           <div class="bar"></div>
@@ -315,7 +315,7 @@
       <div id="reflect-here"></div>
     </div>
     <footer>
-      <div id="footer" class="container">
+      <div id="footer" class="container-fluid">
         <div class="d-flex flex-column">
           <div class="m-4 d-flex justify-content-center">
             <a href="https://www.netflix.com" name="netflix">
@@ -455,7 +455,7 @@
       }
       function setupWebGL() {
         $.getScript("Build/UnityLoader.js", function () {
-          $("#webgl-alt-img").hide()
+          $("#webgl-alt-img").hide();
           const unityInstance = UnityLoader.instantiate(
             "unityContainer",
             "Build/C_B.json",
