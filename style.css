@@ -409,10 +409,10 @@ a.highlighted:active {
   border: 2px solid #ffaffc;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 4px #663664 inset, 0px 0px 5px 4px #663664;
-  font-size: 22px;
+  font-size: 42px;
   font-weight: 400;
   padding: 6px 15px 4px;
-  padding: 2px 7px;
+  /*padding: 2px 7px;*/
 }
 .btn-netflix:hover,
 .btn-netflix:active {
@@ -423,12 +423,13 @@ a.highlighted:active {
 
 .popup-container {
   position: relative;
-  height: 200px;
+  /*height: 200px;*/
   margin: 20px 20px 60px;
   font-size: 12px;
   z-index: 20;
   color: #ffffff;
   font-weight: 400;
+  text-align: center;
 }
 .popup-container .content {
   padding: 20px;
@@ -462,14 +463,10 @@ a.highlighted:active {
 }
 
 #reflect-here {
-  margin: 0 12px 20px;
+  margin: 0 12px -30px;
 }
 #reflect-here canvas {
   width: 100%;
-}
-
-html:lang(de) #reflect-here {
-  margin-bottom: 100px;
 }
 
 footer {
@@ -498,6 +495,13 @@ footer .logos img {
 }
 footer .logos img:hover {
   opacity: 1;
+}
+footer .smaller {
+  height: 50px;
+}
+footer .smaller img {
+  height: 100%;
+  width: auto;
 }
 footer a,
 footer span {
@@ -548,9 +552,9 @@ footer hr {
     margin: -30px 0 5px;
   }
   .btn-netflix {
-    font-size: 22px;
+    font-size: 42px;
     padding: 6px 20px 4px;
-    padding: 0px 8px;
+    /*padding: 0px 8px;*/
   }
   .popup-container {
     font-size: 14px;
@@ -569,19 +573,13 @@ footer hr {
     margin: -33px 0 0;
   }
   .btn-netflix {
-    font-size: 26px;
+    font-size: 46px;
     padding: 8px 20px 6px;
-    padding: 0px 9px;
+    /*padding: 0px 9px;*/
   }
   .popup-container {
     font-size: 18px;
     margin: 20px 40px;
-  }
-  #reflect-here {
-    margin-bottom: 120px;
-  }
-  html:lang(de) #reflect-here {
-    margin-bottom: 180px;
   }
   .logos.responsive {
     max-width: 40%;
@@ -603,16 +601,13 @@ footer hr {
     margin: -44px 0 0;
   }
   .btn-netflix {
-    font-size: 32px;
+    font-size: 52px;
     padding: 8px 25px 6px;
-    padding: 0px 10px;
+    /*padding: 0px 10px;*/
   }
   .popup-container {
     font-size: 22px;
     margin: 20px 40px 40px;
-  }
-  html:lang(de) #reflect-here {
-    margin-bottom: 220px;
   }
   .popup-container .content {
     padding: 40px;
@@ -634,9 +629,9 @@ footer hr {
     margin: -55px 0 10px;
   }
   .btn-netflix {
-    font-size: 38px;
+    font-size: 58px;
     padding: 10px 30px 8px;
-    padding: 0px 11px;
+    /*padding: 0px 11px;*/
   }
   .popup-container {
     font-size: 28px;
@@ -644,12 +639,6 @@ footer hr {
   }
   .popup-container .content {
     padding: 60px;
-  }
-  #reflect-here {
-    margin-bottom: 300px;
-  }
-  html:lang(de) #reflect-here {
-    margin-bottom: 450px;
   }
   .logos.responsive {
     max-width: 20%;
@@ -665,9 +654,9 @@ footer hr {
     margin: -67px 0 0;
   }
   .btn-netflix {
-    font-size: 36px;
+    font-size: 56px;
     padding: 12px 40px 10px;
-    padding: 0px 12px;
+    /*padding: 0px 12px;*/
   }
   .popup-container {
     font-size: 34px;
@@ -675,11 +664,5 @@ footer hr {
   }
   .popup-container .content {
     padding: 80px;
-  }
-  #reflect-here {
-    margin-bottom: 500px;
-  }
-  html:lang(de) #reflect-here {
-    margin-bottom: 600px;
   }
 }

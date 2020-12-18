@@ -6,6 +6,8 @@ String.toLocaleString({
     "%imprint": "Imprint",
     "%watch-on-netflix": "Watch on netflix now",
     "%watch-now": "Watch now",
+    "%need-ringtone": "Need a badass ringtone? Get the game track for free:",
+    "%download-ringtone": "Download",
     "%following-trailer-1":
       "New year. New season. Still badass. Season 3 of Cobra Kai premieres this January only on Netflix. And remember, Cobra Kai Never Dies.",
     "%following-trailer-2":
@@ -78,6 +80,9 @@ String.toLocaleString({
     "%imprint": "Impressum",
     "%watch-on-netflix": "Beobachten Sie auf Netflix",
     "%watch-now": "JETZT ANSEHEN",
+    "%need-ringtone":
+      "Badass-Klingelton gefällig? Hol dir die Game-Melodie umsonst auf's Handy:",
+    "%download-ringtone": "Download",
     "%following-trailer-1":
       "Neues Jahr, neue Staffel, aber immer noch Badass: Die dritte Staffel von „Cobra Kai“ feiert diesen Januar exklusiv auf Netflix Premiere. Und immer daran denken: Cobra Kai stirbt nie.",
     "%following-trailer-2":
@@ -151,6 +156,8 @@ const translations = [
   "privacy",
   "imprint",
   "watch-now",
+  "need-ringtone",
+  "download-ringtone",
   "following-trailer-1",
   // "following-trailer-2",
   "following-trailer-3",
