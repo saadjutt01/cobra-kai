@@ -22,10 +22,15 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10%;
-  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4% 7%;
+  background-color: rgba(0, 0, 0, 0.85);
+  text-transform: none;
   z-index: 30;
   cursor: pointer;
+}
+.overlay > div {
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 a {
@@ -245,8 +250,10 @@ a.highlighted:active {
   margin: 0 35px;
   /*padding: 10px 0;*/
 }
-.bordered.ctrls .logos img {
+.bordered.ctrls .logos img[id^="att-left-arr"],
+.bordered.ctrls .logos img[id^="att-right-arr"] {
   /*width: 100%;*/
+  margin: -20px auto;
 }
 
 .bordered.ctrls-fol {
@@ -513,20 +520,9 @@ footer hr {
   );
 }
 
-#att-joystick-base {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  z-index: -1;
-  top: 36%;
-}
-
 @media (min-width: 490px) {
   .popup-container {
     margin: 20px 20px 40px;
-  }
-  #att-joystick-base {
-    top: 32%;
   }
 }
 @media (min-width: 530px) {
@@ -582,9 +578,6 @@ footer hr {
   }
   .logos.responsive {
     max-width: 40%;
-  }
-  #att-joystick-base {
-    top: 18%;
   }
   footer .logos {
     width: 70%;

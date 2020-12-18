@@ -50,48 +50,40 @@ function doReflect(img, options) {
 
 function startAnimation() {
   $('[id^="att-left-arr"]').toggle();
-  $("#att-joystick-center").hide();
-  $("#att-joystick-left").show();
+  $("#att-joystick-center, #att-joystick-left").toggle();
 
   setTimeout(function () {
     $('[id^="att-left-arr"]').toggle();
-    $("#att-joystick-left").hide();
-    $("#att-joystick-center").show();
+    $("#att-joystick-left, #att-joystick-center").toggle();
   }, 250);
 
   setTimeout(function () {
     $('[id^="att-left-arr"]').toggle();
-    $("#att-joystick-center").hide();
-    $("#att-joystick-left").show();
+    $("#att-joystick-center, #att-joystick-left").toggle();
   }, 550);
 
   setTimeout(function () {
     $('[id^="att-left-arr"]').toggle();
-    $("#att-joystick-left").hide();
-    $("#att-joystick-center").show();
+    $("#att-joystick-left, #att-joystick-center").toggle();
   }, 750);
 
   setTimeout(function () {
     $('[id^="att-right-arr"]').toggle();
-    $("#att-joystick-center").hide();
-    $("#att-joystick-right").show();
+    $("#att-joystick-center, #att-joystick-right").toggle();
   }, 1000);
 
   setTimeout(function () {
     $('[id^="att-right-arr"]').toggle();
-    $("#att-joystick-right").hide();
-    $("#att-joystick-center").show();
+    $("#att-joystick-right, #att-joystick-center").toggle();
   }, 1250);
 
   setTimeout(function () {
     $('[id^="att-right-arr"]').toggle();
-    $("#att-joystick-center").hide();
-    $("#att-joystick-right").show();
+    $("#att-joystick-center, #att-joystick-right").toggle();
   }, 1500);
 
   setTimeout(function () {
     $('[id^="att-right-arr"]').toggle();
-    $("#att-joystick-right").hide();
-    $("#att-joystick-center").show();
+    $("#att-joystick-right, #att-joystick-center").toggle();
   }, 1750);
 }
