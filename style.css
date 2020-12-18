@@ -13,6 +13,9 @@ body {
   background-size: 100%;
   color: white;
 }
+.container-fluid {
+  max-width: 1920px;
+}
 .overlay {
   position: fixed;
   display: none;
@@ -461,6 +464,10 @@ a.highlighted:active {
 #reflect-here {
   margin: 0 12px 20px;
 }
+#reflect-here canvas {
+  width: 100%;
+}
+
 html:lang(de) #reflect-here {
   margin-bottom: 100px;
 }
