@@ -300,27 +300,15 @@
           </a>
         </div>
         <div class="popup-container">
-          <div class="content">
-            <p data-lang="following-trailer-1">
-              New year. New season. Still badass. Season 3 of Cobra Kai
-              premieres this January only on Netflix. And remember, Cobra Kai
-              Never Dies.
-            </p>
-            <p data-lang="following-trailer-2">
-              About Netflix: Netflix is the world's leading streaming
-              entertainment service with over 195 million paid memberships in
-              over 190 countries enjoying TV series, documentaries and feature
-              films across a wide variety of genres and languages. Members can
-              watch as much as they want, anytime, anywhere, on any
-              internet-connected screen. Members can play, pause and resume
-              watching, all without commercials or commitments.
-            </p>
-
-            <p data-lang="following-trailer-3">
-              With a new sensei at the helm of the Cobra Kai dojo, a three-way
-              feud takes center stage. Old grudges — like Cobra Kai — never die.
-            </p>
-          </div>
+          <p data-lang="following-trailer-1">
+            New year. New season. Still badass. Season 3 of Cobra Kai premieres
+            this January only on Netflix. And remember, Cobra Kai Never Dies.
+          </p>
+          <p data-lang="following-trailer-3">
+            With a new sensei at the helm of the Cobra Kai dojo, a three-way
+            feud takes center stage. Old grudges — like Cobra Kai — never die.
+          </p>
+          <!-- <div class="content"></div> -->
         </div>
         <div class="cborderbutton"></div>
       </div>
@@ -394,7 +382,7 @@
             >
           </div>
           <hr class="m-2 mx-auto" size />
-          <div class="m-2 d-flex flex-row justify-content-center">
+          <div class="m-2 d-flex flex-row justify-content-center text-center">
             <span class="mx-5" data-lang="concept-by"
               >Concept, development and hosting by</span
             >
@@ -450,7 +438,7 @@
     <script>
       $(document).ready(function () {
         $(".menu-icon.lang").prop("disabled", false);
-        // loadLanguage();
+        loadLanguage();
         setCtrlsfolHeight();
         setYoutubeVideoHeight();
         const element = $("#reflect-this");
@@ -517,43 +505,6 @@
             $("#unityContainer").css("background", "transparent");
           }, 3000);
         });
-      }
-
-      function loadLanguage(toggle = false) {
-        let lang = "";
-        if (toggle) {
-          lang = String.locale == "en" ? "de" : "en";
-        } else {
-          if (typeof Storage !== "undefined") {
-            // Code for localStorage/sessionStorage.
-            lang = localStorage.getItem("lang");
-          } else {
-            // Sorry! No Web Storage support..
-          }
-          if (!languages_available.includes(lang)) {
-            lang = "en";
-          }
-        }
-        String.locale = lang;
-
-        $(".menu-icon.lang").text(lang);
-
-        for (const translation of translations) {
-          const element = $('[data-lang="' + translation + '"]');
-          const translated = localize(`%${translation}`, element.text());
-          element.text(translated);
-        }
-        document.documentElement.lang = String.locale;
-        localStorage.setItem("lang", String.locale);
-      }
-
-      function localize(string, fallback) {
-        const localized = string.toLocaleString();
-        if (localized !== string) {
-          return localized;
-        } else {
-          return fallback;
-        }
       }
       function overlay(overlay) {
         $("body").css("overflow", "hidden");

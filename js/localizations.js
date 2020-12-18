@@ -122,19 +122,25 @@ String.toLocaleString({
       "Die Experience, einschließlich aller Inhalte, die in der Experience bereitgestellt werden, ist durch Urheberrechte, Geschäftsgeheimnisse oder andere Gesetze und Verträge über geistiges Eigentum geschützt. Netflix ist eine eingetragene Marke von Netflix, Inc. Wenn Sie der Meinung sind, dass Ihre Arbeit in einer Weise vervielfältigt oder verbreitet wurde, die eine Urheberrechtsverletzung darstellt, oder wenn Sie Kenntnis von urheberrechtsverletzendem Material haben, das über die Experience verfügbar ist, benachrichtigen Sie uns bitte, indem Sie das Formular für Ansprüche wegen Urheberrechtsverletzung ausfüllen (www.netflix.com/copyrights).",
     "%overlay-privacy-intended-4":
       "Durch die Nutzung, den Besuch oder das Aufrufen der Experience akzeptieren Sie diese Bedingungen und stimmen ihnen zu. Wenn Sie diese Bedingungen und/oder etwaige Aktualisierungen dieser Bedingungen nicht akzeptieren, nutzen Sie diese Experience bitte nicht.",
-    "%overlay-imprint-service-offered": "Cobra Kai – TheStrikeBack und diese Website sind ein Angebot der ",
+    "%overlay-imprint-service-offered":
+      "Cobra Kai – TheStrikeBack und diese Website sind ein Angebot der ",
     "%overlay-imprint-david-martin": "davidmartin GmbH",
     "%overlay-imprint-david-martin-1": "Tal 26",
     "%overlay-imprint-david-martin-2": "80331 München",
     "%overlay-imprint-david-martin-3": " ",
-    "%overlay-imprint-authorized": "Vertreten durch: David Stephan & Martin Eggert",
-    "%overlay-imprint-authorized-1": "Inhaltlich verantwortlich (gem. §55 Abs. 2 RStV): David Stephan & Martin Eggert",
+    "%overlay-imprint-authorized":
+      "Vertreten durch: David Stephan & Martin Eggert",
+    "%overlay-imprint-authorized-1":
+      "Inhaltlich verantwortlich (gem. §55 Abs. 2 RStV): David Stephan & Martin Eggert",
     "%overlay-imprint-authorized-2": "Registernummer: HRB 219269",
     "%overlay-imprint-authorized-3": "Umsatzsteuer-ID: DE 300 83 72 80",
     "%overlay-imprint-authorized-4": "Registergericht: Amtsgericht München",
-    "%overlay-imprint-behalf-netflix": "Das Angebot ist im Auftrag von Netflix (www.netflix.com) entstanden. Das Angebot, inklusive aller darin enthaltenen Inhalte, ist durch das Urheberrecht, Betriebsgeheimnis oder andere geistige Eigentumsrechte oder Vereinbarungen geschützt. Netflix ist eine eingetragene Handelsmarke der Netflix, Inc. Denken Sie, Ihre Arbeit würde hier urheberrechtswidrig wiedergegeben oder verbreitet, oder haben Sie eine unrechtmäßige Nutzung sonstigen Materials in diesem Angebot entdeckt, benachrichtigen Sie uns bitte über das Formular zur Anmeldung von Urheberrechtsverletzungen (www.netflix.com/copyrights).",
-    "%overlay-imprint-developed-by": "Die Website und das Spiel wurden entwickelt von FRAG Games (www.frag-games.com) und Wolpertinger Games (www.wolpertingergames.com), Mitgliedern der Remote Control Family (www.r-control.de).",
-    "%overlay-imprint-copyrights": "© 2020 Netflix, david+martin, FRAG Games, Wolpertinger Games",
+    "%overlay-imprint-behalf-netflix":
+      "Das Angebot ist im Auftrag von Netflix (www.netflix.com) entstanden. Das Angebot, inklusive aller darin enthaltenen Inhalte, ist durch das Urheberrecht, Betriebsgeheimnis oder andere geistige Eigentumsrechte oder Vereinbarungen geschützt. Netflix ist eine eingetragene Handelsmarke der Netflix, Inc. Denken Sie, Ihre Arbeit würde hier urheberrechtswidrig wiedergegeben oder verbreitet, oder haben Sie eine unrechtmäßige Nutzung sonstigen Materials in diesem Angebot entdeckt, benachrichtigen Sie uns bitte über das Formular zur Anmeldung von Urheberrechtsverletzungen (www.netflix.com/copyrights).",
+    "%overlay-imprint-developed-by":
+      "Die Website und das Spiel wurden entwickelt von FRAG Games (www.frag-games.com) und Wolpertinger Games (www.wolpertingergames.com), Mitgliedern der Remote Control Family (www.r-control.de).",
+    "%overlay-imprint-copyrights":
+      "© 2020 Netflix, david+martin, FRAG Games, Wolpertinger Games",
   },
 });
 
@@ -146,7 +152,7 @@ const translations = [
   "imprint",
   "watch-now",
   "following-trailer-1",
-  "following-trailer-2",
+  // "following-trailer-2",
   "following-trailer-3",
   "concept-by",
   "overlay-privacy-welcome",
@@ -184,3 +190,78 @@ const translations = [
   "overlay-imprint-developed-by",
   "overlay-imprint-copyrights",
 ];
+
+const socialMediaLinks = {
+  en: {
+    insta: "https://www.instagram.com/netflix",
+    fb: "https://www.facebook.com/Netflix",
+    twit: "https://twitter.com/Netflix",
+    netflix: "https://www.netflix.com",
+  },
+  de: {
+    insta: "https://www.instagram.com/netflixde/",
+    fb: "https://www.facebook.com/NetflixDACH/",
+    twit: "https://twitter.com/NetflixDE",
+    netflix: "https://www.netflix.de",
+  },
+};
+
+const trailerIframe = {
+  en: {
+    src: "https://www.youtube.com/embed/LcDQqGJG8pA",
+    title: "Cobra Kai: Season 3 | Official Trailer | Netflix",
+  },
+  de: {
+    src: "https://www.youtube.com/embed/h2U1uaZ5vog",
+    title: "Cobra Kai: Staffel 3 | Offizieller Trailer | Netflix",
+  },
+};
+
+function loadLanguage(toggle = false) {
+  let lang = "";
+  if (toggle) {
+    lang = String.locale == "en" ? "de" : "en";
+  } else {
+    if (typeof Storage !== "undefined") {
+      // Code for localStorage/sessionStorage.
+      lang = localStorage.getItem("lang");
+    } else {
+      // Sorry! No Web Storage support..
+    }
+    if (!languages_available.includes(lang)) {
+      lang = "en";
+    }
+  }
+  String.locale = lang;
+
+  $(".menu-icon.lang").text(lang);
+
+  for (const translation of translations) {
+    const element = $('[data-lang="' + translation + '"]');
+    const translated = localize(`%${translation}`, element.text());
+    element.text(translated);
+  }
+
+  // localize links of social media
+  const localeLinks = socialMediaLinks[String.locale];
+  for (const l in localeLinks) {
+    $(`a[name="${l}"]`).attr("href", localeLinks[l]);
+  }
+
+  // localize trailer iframe
+  const iframeAttributes = trailerIframe[String.locale];
+  for (const attr in iframeAttributes) {
+    $("iframe").attr(attr, iframeAttributes[attr]);
+  }
+  document.documentElement.lang = String.locale;
+  localStorage.setItem("lang", String.locale);
+}
+
+function localize(string, fallback) {
+  const localized = string.toLocaleString();
+  if (localized !== string) {
+    return localized;
+  } else {
+    return fallback;
+  }
+}
