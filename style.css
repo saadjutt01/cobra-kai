@@ -675,3 +675,8 @@ footer hr {
     padding: 80px;
   }
 }
+
+/* Over-riding boostrap default to resolve conflict with webgl game */
+.progress {
+  display: block;
+}
