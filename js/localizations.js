@@ -72,6 +72,7 @@ String.toLocaleString({
       "The website and game are developed and hosted by FRAG Games (www.frag-games.com) and Wolpertinger Games (www.wolpertingergames.com), members of the Remote Control Family (",
     "%overlay-imprint-copyrights":
       "© 2020 Netflix, david+martin, FRAG Games, Wolpertinger Games ",
+    "%change-preference": "Change your Cookies Preferences",
   },
   de: {
     "%play-game": "Jetzt spielen",
@@ -146,6 +147,7 @@ String.toLocaleString({
       "Die Website und das Spiel wurden entwickelt von FRAG Games (www.frag-games.com) und Wolpertinger Games (www.wolpertingergames.com), Mitgliedern der Remote Control Family (www.r-control.de).",
     "%overlay-imprint-copyrights":
       "© 2020 Netflix, david+martin, FRAG Games, Wolpertinger Games",
+    "%change-preference": "Cookie-Einstellungen ändern",
   },
 });
 
@@ -196,6 +198,7 @@ const translations = [
   "overlay-imprint-behalf-netflix",
   "overlay-imprint-developed-by",
   "overlay-imprint-copyrights",
+  "change-preference",
 ];
 
 const socialMediaLinks = {
