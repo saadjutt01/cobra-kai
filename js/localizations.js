@@ -147,7 +147,7 @@ String.toLocaleString({
       "Die Website und das Spiel wurden entwickelt von FRAG Games (www.frag-games.com) und Wolpertinger Games (www.wolpertingergames.com), Mitgliedern der Remote Control Family (www.r-control.de).",
     "%overlay-imprint-copyrights":
       "© 2020 Netflix, david+martin, FRAG Games, Wolpertinger Games",
-    "%change-preference": "Cookie-Einstellungen ändern",
+    "%change-preference": "Cookie-Einstellungen anpassen",
   },
 });
 

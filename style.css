@@ -13,6 +13,12 @@ body {
   background-size: 100%;
   color: white;
 }
+body > .cc_overlay_lock {
+  text-transform: none;
+}
+body .cc_overlay_lock > .cc_css_reboot button {
+  padding: 0.5rem;
+}
 .container-fluid {
   max-width: 1920px;
 }
