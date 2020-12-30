@@ -119,10 +119,10 @@ a.highlighted:active {
   z-index: auto;
 }
 .bordered.top .cborder.left {
-  background-image: url("./img/btl.webp");
+  background-image: url("./img/btl.png");
 }
 .bordered.top .cborder.right {
-  background-image: url("./img/btr.webp");
+  background-image: url("./img/btr.png");
 }
 .bordered.top .cborder.left::before,
 .bordered.top .cborder.right::before {
@@ -135,11 +135,11 @@ a.highlighted:active {
 }
 .bordered.top .cborder.left::before {
   right: -5px;
-  background-image: url(./img/btlback.webp);
+  background-image: url(./img/btlback.png);
 }
 .bordered.top .cborder.right::before {
   left: -5px;
-  background-image: url(./img/btrback.webp);
+  background-image: url(./img/btrback.png);
 }
 .bordered.top .bulb {
   height: 100%;
@@ -173,10 +173,10 @@ a.highlighted:active {
   width: 33px;
 }
 .bordered.top-fol .cborder.left {
-  background-image: url("./img/btlfol.webp");
+  background-image: url("./img/btlfol.png");
 }
 .bordered.top-fol .cborder.right {
-  background-image: url("./img/btrfol.webp");
+  background-image: url("./img/btrfol.png");
 }
 .bordered.top-fol .background {
   height: 100%;
@@ -205,10 +205,10 @@ a.highlighted:active {
   width: 21px;
 }
 .bordered.webgl .cborder.left {
-  background-image: url("./img/bwebl.webp");
+  background-image: url("./img/bwebl.png");
 }
 .bordered.webgl .cborder.right {
-  background-image: url("./img/bwebr.webp");
+  background-image: url("./img/bwebr.png");
 }
 .bordered .logos {
   padding: 10px 0;
@@ -250,10 +250,10 @@ a.highlighted:active {
   width: 50px;
 }
 .bordered.ctrls .cborder.left {
-  background-image: url("./img/bctrlsl.webp");
+  background-image: url("./img/bctrlsl.png");
 }
 .bordered.ctrls .cborder.right {
-  background-image: url("./img/bctrlsr.webp");
+  background-image: url("./img/bctrlsr.png");
 }
 .bordered.ctrls .logos {
   margin: 0 35px;
@@ -287,10 +287,10 @@ a.highlighted:active {
   width: 50px;
 }
 .bordered.ctrls-fol .cborder.left {
-  background-image: url("./img/bctrlslfol.webp");
+  background-image: url("./img/bctrlslfol.png");
 }
 .bordered.ctrls-fol .cborder.right {
-  background-image: url("./img/bctrlsrfol.webp");
+  background-image: url("./img/bctrlsrfol.png");
 }
 
 .btn-custom {
@@ -459,7 +459,7 @@ a.highlighted:active {
   height: 22px;
   position: absolute;
   background-size: 100% 100%;
-  background-image: url("./img/bbottom.webp");
+  background-image: url("./img/bbottom.png");
 }
 
 .reflection {
